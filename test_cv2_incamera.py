@@ -9,10 +9,6 @@ while True:
     # フレームをキャプチャ
     ret, frame = cap.read() 
 
-    # フレームのキャプチャに失敗した場合、ループを終了
-    if not ret: 
-        break 
-
     # フレームをウィンドウに表示
     cv2.imshow('Camera', frame) 
 

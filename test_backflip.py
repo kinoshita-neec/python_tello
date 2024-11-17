@@ -1,19 +1,19 @@
 from djitellopy import Tello 
 import time 
 
-# Telloドローンのインスタンスを作成
+#! Telloドローンのインスタンスを作成
 tello = Tello() 
 
-# ドローンに接続
+#! ドローンに接続
 tello.connect() 
 
-# 離陸
+#! 離陸
 tello.takeoff() 
 
-# 2秒間待機
+#! 2秒間待機
 time.sleep(2) 
 
-# 後方にフリップ
+#!pip 後方にフリップ
 tello.flip_back() 
 
 # 2秒間待機

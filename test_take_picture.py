@@ -1,19 +1,10 @@
 # test_take_picture.py
 import cv2
 
-# カメラキャプチャオブジェクトを作成（0：デフォルトカメラ）
 cap = cv2.VideoCapture(0)
 
-# 無限ループでフレームを読み取る
 while True:
-    # フレームをキャプチャ
     ret, frame = cap.read()
-
-    # フレームのキャプチャに失敗した場合、ループを終了
-    if not ret:
-        break
-
-    # フレームをウィンドウに表示
     cv2.imshow('Camera', frame)
 
     # キー入力を待つ
@@ -30,4 +21,10 @@ while True:
 
 # キャプチャオブジェクトとウィンドウを解放
 cap.release()
+cv2.destroyAllWindows()
+
+# 保存したフレームを表示
+captured_frame = cv2.imread('captured_frame.png')
+cv2.imshow('Captured Frame', captured_frame)
+cv2.waitKey(0)
 cv2.destroyAllWindows()

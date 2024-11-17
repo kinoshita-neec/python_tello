@@ -8,7 +8,7 @@ tello.connect()
 tello.takeoff()
 
 # 120 cmに達するまで上昇
-while tello.get_height() < 120:
+while tello.get_height() < 140:
     tello.send_rc_control(0, 0, 20, 0)
     time.sleep(0.2)
 
