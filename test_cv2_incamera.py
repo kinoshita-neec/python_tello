@@ -14,7 +14,7 @@ while True:
 
     # 'q'キーが押されたらループを終了
     if cv2.waitKey(1) & 0xFF == ord('q'):
-        break 
+        break
 
 # キャプチャオブジェクトを解放
 cap.release() 
